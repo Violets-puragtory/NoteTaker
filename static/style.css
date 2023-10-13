@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap');
+
+:root {
+    text-align: center;
+
+    --bg-color: rgb(10, 10, 10);
+    --bg-color-2: rgb(25, 25, 30);
+
+    --bg-gradient-1: rgb(255, 0, 0);
+    --bg-gradient-2: rgb(0, 0, 255);
+}
+
+body {
+    background-color: var(--bg-color);
+    background-image: radial-gradient(transparent 7.5%, var(--bg-color) 7.5%),
+        linear-gradient(45deg, var(--bg-gradient-1), var(--bg-gradient-2));
+    /* Some magic fuckery you'll forget abt in a week */
+    background-size: 50px 50px, 100vw 100vh;
+
+    background-position: 50% 50%, 0px 0px;
+
+    color: white;
+
+    margin: 0px;
+
+    font-family: 'Rubik';
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.title {
+    display: block;
+    background-color: var(--bg-color);
+    /* width: 100vw; */
+    padding: 10px;
+    margin: 0;
+}
+
+hr {
+    margin: 15px;
+}
+
+main {
+    padding: 0px 15px;
+}
+
+button,
+a {
+    font-size: 1.75rem;
+    text-align: left !important;
+    background-color: black;
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px white solid;
+    color: white !important;
+    user-select: none;
+    text-decoration: none;
+    display: inline-block;
+    transform: scale(0.9);
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    background-image: radial-gradient(circle, rgb(150, 0, 255) 25%, black 25%), linear-gradient(black, black);
+    background-size: 1px 1px, 100% 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+}
+
+button:hover,
+a:hover {
+    transform: scale(1);
+    background-size: 400% 400%, 100% 100%;
+}
+
+button:active,
+a:active {
+    transition: none;
+    transform: scale(1.1);
+    background-size: 400% 400%, 100% 100%;
+}
+
+#noteSelect {
+    background: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    scale: 0;
+    
+    transition: opacity 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+#noteSelect > div {
+    border: 2px white solid;
+    background: var(--bg-color-2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 15px;
+    transform: translateY(-50%) translateX(-50%);
+}

@@ -1,0 +1,22 @@
+{
+  "name": "notetaker",
+  "version": "1.0.0",
+  "description": "a dynamic website for taking notes of different types",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Violets-puragtory/NoteTaker.git"
+  },
+  "author": "Violet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Violets-puragtory/NoteTaker/issues"
+  },
+  "homepage": "https://github.com/Violets-puragtory/NoteTaker#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
